@@ -5,11 +5,10 @@ import { css } from '@emotion/core';
 import Layout from '../Layout';
 import SEO from '../SEO';
 import ImageCredit from '../ImageCredit';
-import Post from '../Post';
+import Posts from '../Posts';
 import { contentWrap } from './404-styles';
 import { contentWidth } from '../Layout/GlobalStyles';
 import { categoryImage } from '../CategoryPage/category-page-styles';
-import { postsWrap } from '../BlogIndex/blog-index-styles';
 import {
   imageWrap,
   postTitle,
@@ -37,20 +36,7 @@ const NotFoundPage = ( { posts } ) => {
         <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
         <h2>Maybe try one of these:</h2>
       </div>
-      <div css={ postsWrap }>
-				{ posts.map( ( { node } ) => {
-					return (
-						<Post
-							date={ node.frontmatter.date }
-							excerpt={ node.excerpt }
-							image={ node.frontmatter.featuredImage }
-							key={ node.fields.slug }
-							slug={ node.fields.slug }
-							title={ node.frontmatter.title || node.fields.slug }
-						/>
-					)
-				} ) }
-			</div>
+      <Posts posts={ posts } />
     </Layout>
   )
 };

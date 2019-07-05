@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import Layout from '../Layout';
-import Post from '../../components/Post';
+import Posts from '../../components/Posts';
 import SEO from '../SEO';
-import { postsWrap } from '../BlogIndex/blog-index-styles';
 import {
 	categoryHeader,
 	categoryTitle,
@@ -21,20 +20,7 @@ const CategoryList = ( { category, location, posts, siteTitle, total } ) => {
 			<section css={ categoryHeader }>
 				<h1 css={ categoryTitle }>{ categoryName }</h1>
 			</section>
-			<div css={ postsWrap }>
-				{ posts.map( ( { node } ) => {
-					return (
-						<Post
-							date={ node.frontmatter.date }
-							excerpt={ node.excerpt }
-							image={ node.frontmatter.featuredImage }
-							key={ node.fields.slug }
-							slug={ node.fields.slug }
-							title={ node.frontmatter.title || node.fields.slug }
-						/>
-					)
-				} ) }
-			</div>
+			<Posts posts={ posts } />
 			<h2 css={ viewCategories }>
 				<Link to="/category">View all categories</Link>
 			</h2>

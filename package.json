@@ -72,9 +72,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "deploy": "npm run build && gh-pages -d public",
-    "deploy:github": "npm run build && node ./scripts/deploy-github",
-    "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",

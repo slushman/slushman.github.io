@@ -1,7 +1,6 @@
 import { shallowFactory } from '../../../testutils';
 
 import NotFoundPage from './404';
-import { exportAllDeclaration } from '@babel/types';
 
 const defaultProps = {
 	location: {
@@ -37,9 +36,9 @@ const factory = shallowFactory( NotFoundPage, defaultProps );
 describe('<NotFoundPage />', () => {
   it('renders without crashing', () => {
 		const wrapper = factory();
-		const foundPosts = wrapper.find('Post');
+		const foundPosts = wrapper.find('Posts');
 
 		expect(wrapper.exists()).toBe(true);
-		expect(foundPosts).toHaveLength(2);
+		expect(foundPosts.exists()).toBe(true);
 	});
 });

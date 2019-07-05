@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import HomePage from '../components/HomePage';
+import BlogIndex from '../components/BlogIndex';
 import useSiteMetadata from '../hooks/UseSiteMetadata';
 
 const QueryBlogIndex = ( { data, location } ) => {
@@ -9,7 +9,7 @@ const QueryBlogIndex = ( { data, location } ) => {
   const posts = data.allMdx.edges;
 
   return (
-		<HomePage
+		<BlogIndex
 			location={ location }
 			posts={ posts }
 			siteTitle={ siteTitle }
@@ -17,7 +17,7 @@ const QueryBlogIndex = ( { data, location } ) => {
   )
 };
 
-export default QueryHomePage;
+export default QueryBlogIndex;
 
 export const pageQuery = graphql`
   query {
