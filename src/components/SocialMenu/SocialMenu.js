@@ -1,8 +1,7 @@
 import React from 'react';
 
-import Facebook from '../SVGs/Facebook';
-import Github from '../SVGs/Github';
-import LinkedIn from '../SVGs/Linkedin';
+import Github from '../SVGs/GitHub';
+import LinkedIn from '../SVGs/LinkedIn';
 import RSS from '../SVGs/RSS';
 
 import {

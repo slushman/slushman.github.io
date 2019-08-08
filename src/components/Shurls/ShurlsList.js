@@ -2,7 +2,7 @@ import React from 'react';
 
 import IconEmail from '../SVGs/Email';
 import IconFacebook from '../SVGs/Facebook';
-import IconLinkedIn from '../SVGs/Linkedin';
+import IconLinkedIn from '../SVGs/LinkedIn';
 import IconPinterest from '../SVGs/Pinterest';
 import IconStumbleupon from '../SVGs/Stumbleupon';
 import IconTumblr from '../SVGs/Tumblr';
